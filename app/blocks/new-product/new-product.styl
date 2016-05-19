@@ -1,0 +1,61 @@
+.new-product
+	margin-x(auto)
+	vertical-align top
+	background-color #7dd1c8
+	color colorSecond
+	position relative
+	padding-x(50px)
+	padding-top 44px
+	padding-bottom 38px
+	max-width 1289px
+	background-image url(../images/bg-new.png)
+	background-repeat no-repeat
+	background-position 58% 50%
+
+	&:after
+		content ''
+		position absolute
+		top 11px
+		left 11px
+		bottom 11px
+		right 11px
+		border 2px solid
+
+	+below(l)
+		background-position 75% 50%
+	+below(xs)
+		background-size 25%
+		background-position 80% 15%
+
+	&__content
+		width 50%
+		position relative
+		z-index 2
+
+		+below(xs)
+			width 100%
+
+	&__title
+		font-size 45px
+		font-weight 700
+		margin-bottom 28px
+		span
+			font-weight 400
+
+			+below(xs)
+				display block
+
+		+below(l)
+			font-size 25px
+
+	&__disc
+		font-size 15px
+		margin-bottom 27px
+
+		+below(l)
+			font-size 13px
+
+	&__btn
+		&:hover
+			background-color rgba(#000,.1)
+			border-color inherit

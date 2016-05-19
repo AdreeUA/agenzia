@@ -1,0 +1,76 @@
+.creation
+	position relative
+	font-size 0
+	text-align center
+
+	&__item
+		position relative
+		padding-right 91px
+		padding-left 61px
+		display inline-block
+		width 29%
+		font-size 13px
+		text-align left
+		vertical-align top
+		white-space normal
+
+		&:nth-child(3n)
+			&:before
+				display none
+
+		&:nth-child(-n+3)
+			display inline-block
+
+		&:before
+			position absolute
+			top 50%
+			right -4px
+			margin-top -50px
+			height 100px
+			content ''
+			border 1px solid #000
+
+		+below(xl)
+			padding-right 45px
+			padding-left 30px
+		+below(l)
+			padding-right 25px
+			padding-left 20px
+
+	&__icon
+		display inline-block
+		float left
+		width 78px
+		font-size 48px
+		text-align center
+		vertical-align middle
+
+		+below(l)
+			width 52px
+			font-size 35px
+
+	&__title
+		font-size 36px
+		color #000
+
+		+below(l)
+			font-size 25px
+
+	&__subtitle
+		font-size 18px
+		color #828282
+
+		+below(l)
+			font-size 14px
+
+	&__text
+		margin-bottom 18px
+
+		&:first-of-type
+			margin-top 30px
+
+		&:last-of-type
+			margin-bottom 0
+
+		+below(l)
+			font-size 13px

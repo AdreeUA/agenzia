@@ -1,0 +1,100 @@
+.works
+	display block
+	font-size 0
+	text-align center
+
+	&__item
+		width calc(25%+17px)
+		height 400px
+		overflow hidden
+		display inline-block
+		vertical-align top
+		position relative
+		padding 9px
+		margin -9px
+
+		+below(shd)
+			height 295px
+		+below(xl)
+			height 280px
+			padding 4px
+			margin -4px
+			width 25.6%
+		+below(l)
+			height 300px
+			width 34.1%
+			&:last-child
+				display none
+		+below(m)
+			width 34.33%
+			height 250px
+		+below(sm)
+			height 250px
+			width 50%
+		+below(xs)
+			width 100%
+			&:last-child
+				display inline-block
+
+	&__picture
+		width 100%
+		height 100%
+
+	&__btn
+		background-image url(../images/bg-works.jpg)
+		background-repeat no-repeat
+		background-size cover
+		padding-y(25px)
+		position relative
+
+		&:after
+			content ''
+			position absolute
+			top 0
+			bottom 0
+			right 0
+			left 0
+			background-color rgba(34, 34, 34, .8)
+
+		.btn
+			color colorSecond
+			position relative
+			z-index 10
+
+			&:hover
+				background-color rgba(colorMain, .5)
+				border-color colorSecond
+
+	.more__name
+		font-size 21px
+		line-height 1.8
+
+		+below(l)
+			font-size 18px
+
+	.more__disc
+		font-size 18px
+
+		+below(l)
+			font-size 15px
+
+	.social__link
+		display block
+		font-size 32px
+		line-height 49px
+		width 50px
+		height 50px
+		border 2px solid colorSecond
+
+		&:hover
+			background-color colorSecond
+			color colorMain
+
+		+below(l)
+			width 30px
+			height 30px
+			font-size 21px
+			padding-top 4px
+
+			.fa
+				vertical-align top

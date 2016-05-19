@@ -1,0 +1,34 @@
+include ../title-page/title-page
+include ../journal/journal
+include ../post-review/post-review
+include ../link-come-back/link-come-back
+include ../post/post
+include ../comments/comments
+include ../post-form/post-form
+include ../contact/contact
+
+mixin journal-post()
+	+b.journal-post&attributes(attributes)
+		+title-page 
+			.title-page_bold The Talk of Manchester Awards - 
+			| 4 Reasons
+		+e.nav
+			+e.row
+				+link-come-back(href="/journal.html") back to Journal
+				+e.share
+					span Share:
+					+social([["twitter", "www.twitter.com"],["facebook", "www.facebook.com"],["google-plus", "www.google-plus.com"]
+					])
+		+e.row
+			+post
+			+comments
+		+e.row
+			+e.form
+				A.post-form__reply-leave(href="#") LEAVE A REPLY
+				+post-form("SUBMIT REPLY")
+		+journal
+			+post-review(	getData("post-review")	)
+			+post-review(	getData("post-review")	)
+			+post-review(	getData("post-review")	)
+			+post-review(	getData("post-review")	)
+		+contact

@@ -1,0 +1,39 @@
+include ../user/user
+
+mixin post()
+	+b.post&attributes(attributes)
+		+user.post__user
+		+e.SECTION.content
+			H2 1- Phasellus varius nisi sed lacus volutpat facilisis.
+			+e.video
+				iframe(width="100%" height="320" style="margin-bottom: 45px" src="https://www.youtube.com/v/et281UHNoOU" frameborder="0" allowfullscreen)
+			p 
+				| Nunc eget finibus lorem. Phasellus varius nisi sed lacus volutpat facilisis. Nullam sollicitudin orci non dictum eleifend. Mauris venenatis bibendum diam, vitae euismod nibh interdum ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet quam imperdiet, scelerisque magna non, posuere feugiat. Sed vestibulum nisi non accumsan feugiat.
+			p 
+				| Integer volutpat erat a tristique gravida. Phasellus elementum erat eget lorem mollis imperdiet ac ut libero. 
+				strong Nullam feugiat pharetra purus fermentum interdum. 
+				| Maecenas eleifend finibus justo sed eu pretium magna dictum vitae.
+			+e.fluid-wrap
+				+e.fluid
+					+e.list.owl-carousel
+						+e.A.item(href="assets/images/photo-1.jpg" data-lightbox="image" data-title="Image #1" )
+							+e.IMG.picture(src="assets/images/photo-1.jpg")
+						+e.A.item(href="assets/images/photo-2.jpg" data-lightbox="image" data-title="Image #2" )
+							+e.IMG.picture(src="assets/images/photo-2.jpg")
+						+e.A.item(href="assets/images/photo-3.jpg" data-lightbox="image" data-title="Image #3" )
+							+e.IMG.picture(src="assets/images/photo-3.jpg")
+						+e.A.item(href="assets/images/photo-4.jpg" data-lightbox="image" data-title="Image #4" )
+							+e.IMG.picture(src="assets/images/photo-4.jpg")
+
+			p
+				| Phasellus in rhoncus tortor. Etiam aliquam condimentum sem, ac semper magna suscipit et. Cras facilisis dictum lectus, quis mollis massa tristique sed. Suspendisse nibh ante, venenatis vitae consectetur vitae, bibendum eu libero. Duis gravida commodo mi, nec dignissim lacus imperdiet eu. Aliquam lobortis interdum finibus. Aenean rhoncus tempus massa, sed rutrum odio dignissim id. Pellentesque diam purus, blandit vitae mi id, dictum rhoncus libero. Fusce sed velit molestie, fringilla ligula tincidunt, dictum lectus.
+
+			blockquote
+				| mi vitae laoreet rhoncus, arcu mi viverra enim, vel malesuada velit lectus id turpis. Suspendisse vel luctus magna. Nullam rutrum lacinia massa, convallis lobortis justo lobortis eget. Etiam placerat quam a neque consequat varius vitae ac tellus.
+
+
+
+
+
+
+

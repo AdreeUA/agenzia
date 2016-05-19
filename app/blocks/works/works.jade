@@ -1,0 +1,17 @@
+include ../more/more
+include ../social/social
+include ../btn/btn
+
+mixin works(data)
+	+b.works&attributes(attributes)
+		+e.list
+			each item in data
+				+e.item
+					+e.IMG.picture(src="#{item.image}")
+					+more
+						+e.name #{item.name}
+						+e.disc #{item.disc}
+						if item.social
+							+social(item.social)
+		+e.btn 					
+			+btn._large(href="works.html") More works

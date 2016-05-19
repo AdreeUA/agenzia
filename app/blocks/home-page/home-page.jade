@@ -1,0 +1,42 @@
+include ../fast-nav/fast-nav
+include ../slider/slider
+include ../studio-block/studio-block
+include ../team-block/team-block
+include ../creation/creation
+include ../pagination-circle/pagination-circle
+include ../clients/clients
+include ../title/title
+include ../works/works
+include ../sort/sort
+include ../row/row
+include ../product-block/product-block
+include ../journal/journal
+include ../post-review/post-review
+include ../contact/contact
+
+mixin home-page()
+	+b.home-page&attributes(attributes)
+		+fast-nav
+		+slider
+		+studio-block
+		+team-block
+		+e.creations
+			A(name="servises")
+			+creation(getData("creation")).owl-carousel
+		+e.clients
+			+row
+				+clients(getData("home-page-clients"))
+		+e.works
+			+title("LAST WORKS")
+				+sort
+			+works(getData("works"))
+		+product-block
+		+e.journal
+			+title("Journal")
+			+journal
+				+post-review(	getData("post-review")	)._new
+				+post-review(	getData("post-review")	)
+				+post-review(	getData("post-review")	)
+				+post-review(	getData("post-review")	)
+				+post-review(	getData("post-review")	)
+		+contact

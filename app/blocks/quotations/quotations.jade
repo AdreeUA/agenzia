@@ -1,0 +1,9 @@
+mixin quotations(data)
+	+b.quotations&attributes(attributes)
+		each item in data
+			+e.item
+				+e.semicolon
+					i.fa.fa-quote-right
+				+e.BLOCKQUOTE.quote= item.quote
+				+e.name= item.name
+					+e.SPAN.profession= item.profession

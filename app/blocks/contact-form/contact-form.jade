@@ -1,0 +1,6 @@
+mixin contact-form(btnValue)
+	+b.FORM.contact-form&attributes(attributes)(action="#")
+		+e.INPUT.name(type="text" placeholder="Your Name*" name="name" required)
+		+e.INPUT.email(type="email" placeholder="Email*" name="email" required)
+		+e.TEXTAREA.message(placeholder="Message" name="message" rows="3" cols="50")
+		+e.INPUT.btn(type="submit" value="#{btnValue}" name="btn")

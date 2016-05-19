@@ -1,0 +1,28 @@
+include ../btn/btn
+
+mixin post-review(data)
+	+b.post-review&attributes(attributes)
+		each item in data
+			+e.picture
+				+e.IMG.image(src="#{item.image}")
+			+e.content
+				if item.social
+					+e.share
+						span Share:
+						+social(item.social)
+				+e.info
+					if item.themes
+						- for(var i = 0; i < item.themes.length; i++)
+							+e.A.themes(href="##{item.themes[i]}") #{item.themes} /
+						
+					+e.A.author(href="##{item.author}") #{item.author} /
+					+e.A.date(href="##{item.date}") #{item.date} /
+					
+				+e.H5.title #{item.title}
+				
+				if item.disc
+						+e.disc 
+							- for(var i = 0; i < item.disc.length; i++)
+								p #{item.disc[i]}
+				+e.btn
+					+btn(href="#{item.btnLink}") read more

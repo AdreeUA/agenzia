@@ -1,0 +1,75 @@
+.journal-post
+	// overflow hidden
+	
+	&__row
+		max-width 950px
+		margin-x(auto)
+		clearfix()
+		
+		+below(l)
+			padding-x(30px)
+		
+	&__nav
+		box-shadow 0 5px 5px rgba(0, 0, 0, 0.05)
+		clearfix()
+	
+	&__share
+		float right
+		display inline-block
+		vertical-align middle
+		color #7b7b7b
+		font-size 18px
+		
+		+below(sm)
+			font-size 14px
+		
+		.social
+			margin-left 21px
+			vertical-align middle
+			
+			&__item
+				width 60px
+				text-align center
+				padding 17px
+				border-left 1px solid #dbdbdb
+				
+				&:last-child
+					border-right 1px solid #dbdbdb
+					
+				+below(sm)
+					width auto
+					padding 8px
+	
+	.link-come-back
+		line-height 50px
+		
+		+below(sm)
+			line-height 30px
+		
+	.comments
+		margin-bottom 50px
+		
+		+below(m)
+			margin-bottom 25px
+		
+		&__sum
+			margin-bottom 21px
+		
+		&__item
+			margin-bottom 34px
+			
+			+below(m)
+				margin-bottom 20px
+			
+	.post-form
+		margin-bottom 42px
+
+		&__reply-leave
+			margin-bottom 65px
+			
+			+below(m)
+				margin-bottom 30px
+		
+
+		
+

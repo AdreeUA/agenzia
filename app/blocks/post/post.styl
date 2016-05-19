@@ -1,0 +1,104 @@
+.post
+	padding-top 80px
+	padding-bottom 85px
+	
+	+below(m)
+		padding-y(30px)
+	
+	&__user
+		margin-right 5.3%
+		
+		+below(m)
+			margin-right 0
+			margin-bottom 15px
+		
+	&__content
+		width 80%
+		display inline-block
+		vertical-align top
+		
+		+below(l)
+			width 75%
+		+below(m)
+			width 100%
+		
+	h2
+		margin-bottom 32px
+		color #181820
+		font-size 16px
+		font-weight 700
+		
+	p
+		margin-bottom 18px
+		font-size 16px
+		line-height 1.5
+		
+		&:last-of-type
+			margin-bottom 30px
+		
+	&__fluid-wrap
+		width 50vw
+		margin-left 36%
+		
+		+below(l)
+			margin-left 43%
+		+below(m)
+			margin-left 49%
+	
+	&__fluid
+		width 100vw
+		margin-left -100%
+		margin-bottom 35px
+		
+	blockquote
+		font-size 16px
+		font-weight 700
+		padding-left 72px
+		padding-right 58px
+		line-height 1.5
+		
+		&:before
+			content '\f10d'
+			display block
+			margin-bottom 14px
+			font-family FontAwesome
+			
+		
+	// OWL CAROUSEL
+	.owl-controls
+		position absolute
+		top 50%
+		left 0
+		right 0
+		z-index 10
+		
+	.owl-next
+	.owl-prev
+		width 66px
+		height 65px
+		background-color white
+		position absolute
+		top 50%
+		margin-top -33px
+		text-align center
+		
+		&:before
+			font-family FontAwesome
+			line-height 65px
+			color #181820
+			font-size 32px
+		
+	.owl-next
+		right 0
+		&:before
+			content '\f105'
+		
+	.owl-prev
+		left 20px
+		&:before
+			content '\f104'
+		
+		+below(l)
+			left 14px
+		
+		

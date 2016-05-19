@@ -1,0 +1,35 @@
+include ../product-more/product-more
+include ../social/social
+include ../product-characteristics/product-characteristics
+include ../link-come-back/link-come-back
+
+mixin product-item(data)
+	+b.product-item&attributes(attributes)
+		+e.NAV.nav
+			+e.A.pagination_prev(href="#")
+				i.fa.fa-angle-left
+				| Previous
+			+e.A.view(href="products.html")
+			+e.A.pagination_next(href="#") Next
+				i.fa.fa-angle-right
+		each item in data
+			if (item.title == "Gildan Blue ")
+				+e.picture-wrap
+					+e.picture
+						+e.image(src="#{item.image}")
+				+e.content
+					+link-come-back(href="product.html")
+						| back to products
+					+e.title #{item.title}
+					+e.price
+						+e.SPAN.old-price #{item.oldPrice}
+						| #{item.price}
+
+					+product-characteristics
+
+					+product-more(data)
+					+e.share
+						| Share this
+
+						+social(item.social)
+

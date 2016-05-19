@@ -1,0 +1,22 @@
+include ../btn/btn
+
+mixin maintenance(data)
+	each item in data
+		+b.maintenance&attributes(attributes)
+			+e.header
+				+e.price
+					| $#{item.price}
+					SPAN.maintenance__price_money p/mo
+				+e.names-tariff #{item.name}
+					+e.audience= item.forWhom
+			if item.listServices
+				each val in item.listServices
+					+e.UL.services
+						+e.item #{val.discSpace} Disc Space
+						+e.item #{val.dataTransfer} Data Transfer
+						+e.item #{val.domainName} Domain Name
+						+e.item #{val.ftp} FTP Accounts
+						+e.item #{val.mysql} MySQL Databases
+						+e.item #{val.support}
+			+e.btn
+				+btn Singup now!

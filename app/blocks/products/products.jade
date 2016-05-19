@@ -1,0 +1,18 @@
+include ../specifications/specifications
+include ../btn/btn
+
+mixin products(data)
+	+b.UL.products&attributes(attributes)
+		each item in data
+			+e.item
+				+e.A.picture(href="product_item.html")
+					+e.IMG.image(src="#{item.image}" alt="#{item.title} #{item.name}")
+				+e.content
+					+e.A.title(href="product_item.html") #{item.title}
+						+e.SPAN.name #{item.name}
+					+e.disc #{item.disc}
+					if item.specifications
+						+specifications(item.specifications)
+					+btn(href="product_item.html") #{item.price} learn more
+					
+					

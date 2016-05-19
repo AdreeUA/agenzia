@@ -1,0 +1,230 @@
+.product-characteristics
+
+	&__heading
+		font-size 16px
+		font-weight 700
+		display block
+		margin-bottom 10px
+		text-transform none
+
+	&__color
+	&__size
+		display inline-block
+		vertical-align top
+		margin-bottom 36px
+		
+		+below(l)
+			margin-bottom 20px
+
+	&__quantity
+		display inline-block
+		vertical-align top
+		margin-right 41px
+		
+		+below(xl)
+			margin-right auto
+
+	&__quantity
+		margin-bottom 30px
+
+	&__btn-wrap
+		display inline-block
+		vertical-align top
+		padding-top 26px
+
+	&__add-basket
+		min-width 222px
+		background-color colorMain
+		color colorSecond
+		height 50px
+		display inline-block
+		vertical-align top
+		padding-top 18px
+		text-decoration none
+		margin-right 10px
+
+		&:hover
+			background-color rgba(colorMain, .9)
+
+		.fa
+			font-size 16px
+			margin-left 12px
+			margin-right 8px
+			
+	&__add-basket
+	&__likes
+		margin-bottom 30px
+
+	&__likes
+		width 56px
+		height 50px
+		background-color colorBg
+		display inline-block
+		color colorMain
+		text-decoration none
+		text-align center
+		padding-top 19px
+
+		&:hover
+			.product-characteristics__like_on
+				display inherit
+			.product-characteristics__like_off
+				display none
+
+	&__like
+		font-size 16px
+		text-align center
+
+		&_on
+			display none
+
+	&__clear
+		border none
+		font-size 11px
+		text-decoration underline
+		text-transform uppercase
+		background-color transparent
+		color #606060
+		display block
+
+		&:hover
+			color rgba(#606060, .8)
+			text-decoration none
+
+
+	// SELECT
+	.jq-selectbox
+		width 200px
+
+	.jq-selectbox__select
+		background colorSecond
+		border 1px solid gainsboro
+		border-radius 0
+		height 42px
+		color #737373
+		font-size 12px
+
+	.jq-selectbox__trigger
+		border none
+
+	.jq-selectbox__select-text
+		margin-top 4px
+
+	.jq-selectbox__trigger-arrow
+		top 18px
+
+	.jq-selectbox__dropdown
+		font-size inherit
+		color #737373
+
+	.jq-selectbox li
+		color inherit
+
+		&:hover
+			color colorSecond
+
+	// SELECT color
+	&__color
+		margin-right 20px
+
+		.jq-selectbox__select-text
+			padding-left 40px
+
+			&:before
+				content ''
+				width 28px
+				height 26px
+				// background-color #3361a0
+				vertical-align top
+				margin-right 11px
+				position absolute
+				top 8px
+				left 8px
+
+		.jq-selectbox li
+			padding 12px 10px 6px 40px
+			min-height 43px
+
+	&__color-product
+		position relative
+		color #737373
+		font-size 12px
+
+		&:before
+			content ''
+			width 28px
+			height 26px
+			background-color #3361a0
+			vertical-align top
+			margin-right 11px
+			position absolute
+			top 8px
+			left 8px
+			z-index 10
+
+		&_blue
+			&:before
+				background-color #3361a0
+		&_red
+			&:before
+				background-color red
+		&_green
+			&:before
+				background-color green
+
+	// SELECT size
+	&__size
+		margin-right 20px
+		text-transform uppercase
+
+	// Input number
+	.jq-number
+		padding 0 52px
+
+	.jq-number__spin
+		width 51px
+		height 50px
+		border 1px solid gainsboro
+		border-radius 0
+		background inherit
+
+	.jq-number__spin.minus
+		left 0
+		bottom 0
+
+	.jq-number__spin.plus
+	.jq-number__spin.minus
+		&:after
+			content ''
+			position absolute
+			top 22px
+			left 18px
+			width 11px
+			height 1px
+			border none
+			background colorMain
+
+	.jq-number__spin.plus
+		&:before
+			content ''
+			position absolute
+			top 17px
+			left 23px
+			width 1px
+			height 11px
+			border none
+			background colorMain
+
+
+	.jq-number__field
+		width 51px
+		height 50px
+		border-radius 0
+		background inherit
+		border 1px solid gainsboro
+
+	.jq-number__field input
+		padding 16px 9px
+		text-align center
+		font-size 14px
+		color colorMain

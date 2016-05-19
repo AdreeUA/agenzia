@@ -1,0 +1,7 @@
+include ../btn/btn
+
+mixin journal()
+	+b.journal&attributes(attributes)
+		block
+		+e.btn
+			+btn._large(href="#journal.html") Older Posts

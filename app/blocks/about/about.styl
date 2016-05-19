@@ -1,0 +1,36 @@
+.about
+
+	&__title
+		position relative
+		margin-bottom 26px
+		font-size 21px
+		font-weight 700
+		text-transform uppercase
+
+		&:before
+			position absolute
+			left 0
+			bottom -8px
+			width 20px
+			height 1px
+			content ''
+			background-color colorMain
+
+		+below(l)
+			font-size 15px
+		+below(m)
+			margin-bottom 15px
+
+	&__text
+		margin-bottom 26px
+		font-size 15px
+		line-height 1.7
+
+		b
+			font-weight 700
+
+		+below(l)
+			margin-bottom 14px
+			font-size 13px
+		+below(m)
+			line-height 1.3

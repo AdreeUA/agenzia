@@ -1,0 +1,101 @@
+.home-page
+	display block
+
+	.creation
+		padding-top 135px
+
+		+below(xl)
+			padding-top 70px
+		+below(l)
+			padding-top 45px
+
+		// Пагинация для CREATION
+		.owl-dots
+			position absolute
+			right 0
+			left 0
+			bottom 46px
+
+			+below(l)
+				bottom 10px
+
+			.owl-dot
+				margin 8px
+				display inline-block
+				width 10px
+				height 10px
+				vertical-align middle
+				cursor pointer
+				background-color colorMain
+				border-radius 50%
+
+			.active
+				width 14px
+				height 14px
+				background-color transparent
+				border 2px solid colorMain
+
+	.creation__item
+		margin-bottom 106px
+		width auto
+
+		+below(l)
+			margin-bottom 50px
+
+	&__clients
+		padding-top 54px
+		padding-bottom 59px
+		background-color #f1f1f1
+
+		+below(l)
+			padding-y(30px)
+
+		.clients
+			clearfix()
+
+			+below(m)
+				text-align center
+
+		.clients__title
+			margin-right 130px
+			float left
+			font-size 45px
+			font-weight 700
+
+			+below(xl)
+				margin-right 50px
+			+below(l)
+				margin-right 20px
+				font-size 30px
+			+below(m)
+				margin-right 0
+				margin-bottom 15px
+				float none
+
+		.clients__subtitle
+			display block
+			font-size 30px
+			font-weight 300
+
+			+below(l)
+				font-size 25px
+
+	&__works
+
+		.title
+			margin-right -300px
+
+			&:before
+				display block
+				max-width 1600px
+				height 100%
+				content ''
+
+			+below(l)
+				margin-right 0
+
+		.sort__link
+			color #666
+
+			&_active
+				color colorSecond

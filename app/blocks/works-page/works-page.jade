@@ -1,0 +1,12 @@
+include ../title-page/title-page
+include ../sort/sort
+include ../works/works
+include ../contact/contact
+
+mixin works-page()
+	+b.works-page&attributes(attributes)
+		+title-page Works
+		+e.sort
+			+sort
+		+works(getData("works"))
+		+contact

@@ -1,0 +1,70 @@
+.main-nav
+	display block
+	float right
+	vertical-align top
+
+	+below(l)
+		float none
+
+	&__item
+	&__close
+		display inline-block
+		vertical-align top
+
+	&__item
+		position relative
+		font-size 15px
+		font-weight 400
+		line-height 15px
+
+		&:after
+			position absolute
+			top 20px
+			right -13px
+			font-size 23px
+			content '...'
+			writing-mode tb-rl
+
+		&:last-of-type:after
+			content ''
+
+		+below(xs)
+			&:after
+				top 10px
+			&:last-of-type:after
+				content '...'
+
+	&__link
+		position relative
+		padding 20px 10px 20px 15px
+		display inline-block
+		font-family fontSecondary
+		text-decoration none
+		text-transform uppercase
+		color colorMain
+
+		+below(xs)
+			padding 10px 5px 10px 7px
+
+		&_active
+			font-weight 700
+
+		&:hover
+			&:before
+				position absolute
+				left 50%
+				bottom 0
+				margin-left -9%
+				width 25%
+				height 1px
+				content ''
+				background-color colorMain
+
+	&__close
+		padding 20px
+		font-size 36px
+		line-height 24px
+		cursor pointer
+
+		+below(m)
+			display none

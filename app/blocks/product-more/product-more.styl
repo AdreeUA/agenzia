@@ -1,0 +1,66 @@
+.product-more
+	display block
+
+	&__hidden
+		display none
+
+	&__item
+		position relative
+
+		&:before
+			content ''
+			position absolute
+			width 100%
+			top 0
+			height 1px
+			background-color #e8e8e8
+
+		&:last-of-type
+			&:after
+					content ''
+					position absolute
+					width 100%
+					bottom 0
+					height 1px
+					left 0
+					background-color #e8e8e8
+
+	&__title
+		font-size 16px
+		font-weight 700
+		cursor pointer
+		line-height 37px
+		position relative
+		display block
+
+		&:before
+		&:after
+			content ''
+			position absolute
+			background-color colorMain
+		&:before
+			width 11px
+			height 1px
+			right 13px
+			top 50%
+		&:after
+			width 1px
+			height 11px
+			right 18px
+			top 14px
+
+
+	&__content
+		height 0
+		overflow hidden
+		padding-bottom 15px
+		display none
+		padding-left 15px
+
+	&__hidden:checked ~ .product-more__content
+			height 100%
+			display block
+
+	&__hidden:checked ~ .product-more__title
+		&:after
+			display none		

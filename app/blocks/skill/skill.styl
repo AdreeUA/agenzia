@@ -1,0 +1,40 @@
+.skill
+
+	&__list
+		position relative
+		margin-bottom 41px
+
+		+below(l)
+			margin-bottom 25px
+
+	&__title
+		position relative
+		margin-bottom 36px
+		font-size 21px
+		font-weight 700
+		text-transform uppercase
+
+		&:before
+			position absolute
+			left 0
+			bottom -8px
+			width 20px
+			height 1px
+			content ''
+			background-color colorMain
+
+		+below(l)
+			font-size 15px
+		+below(m)
+			margin-bottom 15px
+
+	&__disc
+		margin-bottom 46px
+		font-size 15px
+
+		+below(xl)
+			margin-bottom 25px
+		+below(l)
+			font-size 13px
+		+below(m)
+			margin-bottom 15px

@@ -1,0 +1,24 @@
+include ../title/title
+include ../skill/skill
+include ../about/about
+include ../btn/btn
+
+mixin studio-block()
+	+b.studio-block&attributes(attributes)
+		+title("The STUDIO")
+		+e.wrap
+			+e.picture
+				//- +e.IMG.image(src="../assets/images/slide-6.jpg" alt="Our skills")
+			+e.skill-set
+				+e.A(name="skill")
+				+e.A(name="about")
+				INPUT#tab-about(type="radio"  name="tabs" checked)
+				+e.LABEL.tab.about__title(for="tab-about") WHO WE ARE
+
+				INPUT#tab-skill(type="radio" name="tabs")
+				+e.LABEL.tab.skill__title(for="tab-skill") Skill
+
+				+about.skill-set__item
+					+btn.studio-block__btn(href="/studio.html") Get in touch
+				+skill.skill-set__item
+					+btn.studio-block__btn(href="/studio.html") Get in touch

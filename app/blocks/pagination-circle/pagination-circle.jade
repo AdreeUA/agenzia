@@ -1,0 +1,6 @@
+mixin pagination-circle(item)
+	+b.pagination-circle&attributes(attributes)
+		+e.SPAN.item_active
+		- for (var i = 1 ; i < item; ++i)
+			+e.SPAN.item
+		

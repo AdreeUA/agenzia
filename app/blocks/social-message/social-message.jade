@@ -1,0 +1,10 @@
+include ../btn/btn
+
+mixin social-message(data)
+	+b.social-message&attributes(attributes)
+		each item in data
+			+e.item
+				+e.icon
+					i.fa(class="fa-#{item.icon}")
+				+e.social LATEST FROM #{item.social}
+				+e.message= item.message

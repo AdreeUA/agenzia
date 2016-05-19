@@ -1,0 +1,38 @@
+.quotations
+	display inline-block
+	vertical-align top
+	max-width 50%
+	text-align center
+	margin-x(auto)
+	position relative
+
+	+below(m)
+		max-width 80%
+
+	&__semicolon
+		font-size 32px
+		margin-bottom 27px
+
+		+below(xl)
+			font-size 25px
+			margin-bottom 15px
+
+	&__quote
+		font-size 17px
+		margin-bottom 18px
+
+		+below(xl)
+			font-size 14px
+			margin-bottom 14px
+
+	&__name
+		font-size 15px
+		font-weight 700
+
+		+below(xl)
+			font-size 13px
+		+below(m)
+			margin-bottom 10px
+
+	&__profession
+		display block

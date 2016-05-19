@@ -1,0 +1,20 @@
+mixin comments()
+	+b.comments&attributes(attributes)
+		+e.sum 4 COMMENTS
+		+e.item
+			+e.avatar
+				IMG.comments__avatar_image(src="assets/images/avatar-1.jpg")
+			+e.content
+				+e.A.author(href="#") Mark
+				+e.A.date(href="#") 15 September 2014, 10:02 am
+				+e.text Proin torto elit rutrum donec rhoncu. Cras eradest cursdus sed dignissim sed euismod Maecenas tellus hen drerit venenatis malesuada. Curabitur lectus. Quisque consectetuer dui sed libero.
+				+e.A.reply(href="#") Reply
+
+		+e.item_sub
+			+e.avatar
+				IMG.comments__avatar_image(src="assets/images/avatar-7.jpg")
+			+e.content
+				+e.A.author(href="#") Jhone
+				+e.A.date(href="#") 16 September 2014, 08:09 pm
+				+e.text Proin torto elit rutrum donec rhoncu. Cras eradest cursdus sed dignissim sed euismod Maecenas tellus hen drerit venenatis malesuada. Curabitur lectus. Quisque consectetuer dui sed libero.
+				+e.A.reply(href="#") Reply

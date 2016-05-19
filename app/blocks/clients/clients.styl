@@ -1,0 +1,36 @@
+.clients
+	display block
+
+	+below(xl)
+		padding-x(20px)
+
+	&__list
+		display flex
+		justify-content space-around
+		flex-wrap wrap
+		align-items center
+
+		// +below(l)
+		// 	justify-content space-around
+
+	&__item
+		display inline-block
+		vertical-align middle
+		background-repeat no-repeat
+
+		+below(l)
+			// margin-right 20px
+
+		&_jquery
+			sprite $jquery
+		&_github
+			sprite $github
+		&_drupal
+			sprite $drupal
+		&_envato
+			sprite $envato
+
+	&__title
+
+		+below(l)
+			font-size 30px

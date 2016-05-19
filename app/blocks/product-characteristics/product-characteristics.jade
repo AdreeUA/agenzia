@@ -1,0 +1,27 @@
+mixin product-characteristics(data)
+	+b.product-characteristics&attributes(attributes)
+		form(id="" method="" action="#")
+			+e.color
+				+e.LABEL.heading(for="color-product") Choose a color
+				select(name="color-product" id="color-product")
+					+e.OPTION.color-product_blue(value="blue") Blue
+					+e.OPTION.color-product_red(value="red") Red
+					+e.OPTION.color-product_green(value="green") Green
+			+e.size
+				+e.LABEL.heading(for="size-product") Select size
+				select(name="size-product" id="size-product")
+					option(value="extraSmall") EXTRA SMALL
+					option(value="small") SMALL
+					option(value="medium") medium
+			+e.quantity
+				+e.LABEL.heading(for="number-product") Quantity
+				input(type="number" class="number-plus-minus" min="1" max="100"
+				id="number-product")
+			+e.btn-wrap
+				+e.A.add-basket(href="#")
+					i.fa.fa-shopping-cart
+					| Add to shopping bag
+				+e.A.likes(href="##")
+					+e.like_off.i.fa.fa-heart-o
+					+e.like_on.i.fa.fa-heart
+			+e.INPUT.clear(type="reset" value="Clear Selection")

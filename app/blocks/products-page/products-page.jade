@@ -1,0 +1,11 @@
+include ../products/products
+include ../new-product/new-product
+include ../title-page/title-page
+include ../contact/contact
+
+mixin products-page()
+	+b.products-page&attributes(attributes)
+		+title-page Products
+		+new-product(getData("new-product"))
+		+products(getData("products"))
+		+contact

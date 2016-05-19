@@ -1,0 +1,14 @@
+include ../btn/btn
+include ../contact/contact
+
+mixin error-404()
+	+b.error-404&attributes(attributes)
+		+e.inner
+			+e.number
+				| 404
+			+e.text
+				| We’re sorry, but the page you’re looking for can’t be found.
+			+btn._large.error-404__come-back(href="/")
+				i.fa.fa-arrow-circle-o-left
+				| Go back to Homepage
+		+contact

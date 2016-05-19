@@ -1,0 +1,32 @@
+.footer
+	padding-y(41px)
+	font-size 26px
+	text-align center
+
+	+below(xl)
+		padding-y(20px)
+	+below(xs)
+		font-size 18px
+
+	&__social
+		margin-bottom 30px
+
+		+below(xl)
+			margin-bottom 10px
+
+	.social__link
+		padding 17px
+		font-size 32px
+
+		+below(xl)
+			padding 13px
+		+below(xs)
+			padding 7px
+			font-size 20px
+
+	.social__item:last-of-type .social__link
+		padding-right 0
+
+	&__copyright
+		b
+			font-weight 700

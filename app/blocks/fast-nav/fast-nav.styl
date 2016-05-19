@@ -1,0 +1,43 @@
+.fast-nav
+	padding-x(87px)
+	text-align right
+	background-color colorMain
+
+	+below(m)
+		padding-x(10px)
+		text-align center
+
+	&__item
+		position relative
+		display inline-block
+		vertical-align top
+
+
+	&__link
+		padding-x(13px)
+		padding-y(20px)
+		display block
+		font-family fontSecondary
+		font-size 17px
+		font-style italic
+		text-decoration none
+		color colorSecond
+
+		&:hover
+			&:before
+				position absolute
+				left 50%
+				bottom 13px
+				margin-left -28%
+				width 50%
+				height 1px
+				content ''
+				background-color colorSecond
+
+		+below(xs)
+			padding 5px 4px
+			&:hover:before
+				bottom 3px
+
+	&__item:last-child .fast-nav__link
+		padding-right 0

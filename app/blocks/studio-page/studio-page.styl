@@ -1,0 +1,236 @@
+.studio-page
+	display block
+
+	&__inner
+		margin-bottom 146px
+
+		+below(shd)
+			margin-bottom 30px
+
+	&__picture
+	&__skills-wrap
+		width 49%
+		display inline-block
+		vertical-align top
+
+		+below(m)
+			width auto
+
+	&__picture
+		clearfix()
+
+	&__image-wrap
+		float left
+		height 500px
+		width 100%
+		overflow hidden
+
+		+below(xl)
+			height 370px
+		+below(l)
+			height 330px
+		+below(m)
+			float none
+			&:last-of-type
+				display none
+		+below(xs)
+			height 270px
+
+	&__image
+		width 100%
+
+		+below(shd)
+			height 100%
+
+	&__skills-wrap
+		padding-top 78px
+
+		+below(xl)
+			padding-top 30px
+		+below(l)
+			padding-top 15px
+		+below(m)
+			padding-right 20px
+
+	.skill
+	.about
+		max-width 709px
+		margin-left 87px
+
+		+below(shd)
+			margin-left 50px
+		+below(l)
+			margin-left 20px
+
+	.about
+		margin-bottom 67px
+
+		+below(xl)
+			margin-bottom 30px
+		+below(l)
+			margin-bottom 15px
+
+		&__list
+			line-height 40px
+			margin-left 66px
+
+			+below(xl)
+				line-height 26px
+			+below(l)
+				line-height 20px
+
+		&__item
+			&:before
+				content '\f058'
+				font-family FontAwesome
+				margin-right 9px
+
+	&__team
+		margin-bottom 119px
+
+		+below(shd)
+			margin-bottom 30px
+
+		.team
+			max-width 1440px
+			margin 0 auto
+			text-align center
+
+			&__item
+				width 360px
+
+				+below(shd)
+					width 316px
+				+below(xl)
+					width 250px
+				+below(l)
+					width 230px
+				+below(sm)
+					width 85%
+					height 250px
+
+	&__quotations
+		text-align center
+		padding-top 49px
+		padding-bottom 79px
+		background-color colorBg
+		margin-bottom 136px
+
+		+below(shd)
+			margin-bottom 50px
+		+below(xl)
+			padding-top 20px
+			padding-bottom 30px
+
+		.owl-dots
+			bottom -50px
+
+			+below(xl)
+				bottom -31px
+
+	&__creation
+		margin-bottom 40px
+
+		+below(shd)
+			margin-bottom 0
+
+		.creation
+			&__item
+				margin-bottom 95px
+
+				+below(shd)
+					padding-x(35px)
+				+below(xl)
+					margin-bottom 40px
+				+below(l)
+					padding-x(20px)
+				+below(m)
+					width 50%
+				+below(sm)
+					width 100%
+
+	&__clients
+		background-color colorBg
+		padding-top 40px
+
+		.clients
+
+			+below(shd)
+				padding-x(30px)
+
+			&__title
+				font-size 21px
+				font-weight 700
+				position relative
+				margin-bottom 66px
+
+				&:before
+					content ''
+					width 20px
+					width 20px
+					height 1px
+					background-color #222
+					position absolute
+					left 0
+					bottom -19px
+
+				+below(l)
+					margin-bottom 30px
+
+			&__subtitle
+				font-weight 400
+
+			&__item
+				margin-left 88px
+				margin-bottom 77px
+
+				&:last-of-type
+					margin-left 0
+
+				+below(shd)
+					margin-bottom 30px
+					margin-left 50px
+				+below(sm)
+					margin-bottom 17px
+					margin-left 10px
+
+	&__maintenance
+		text-align center
+		padding-top 131px
+
+		+below(shd)
+			padding-top 50px
+
+		.maintenance
+			display inline-block
+			vertical-align top
+			margin-right 51px
+			margin-bottom 105px
+
+			&:last-of-type
+				margin-right 0
+
+			+below(shd)
+				margin-right 10px
+				margin-bottom 30px
+			+below(l)
+				margin 0 auto 20px
+				&:last-of-type
+					margin auto
+			+below(sm)
+				margin 0 auto 20px
+				&:last-of-type
+					margin-right 0
+					margin-bottom 20px
+
+	&__social-message
+		padding-top 29px
+		padding-bottom 32px
+		text-align center
+		background-color #efefef
+
+		.owl-dots
+			bottom 18px
+
+			+below(xl)
+				bottom 7px

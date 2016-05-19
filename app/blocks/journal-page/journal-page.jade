@@ -1,0 +1,15 @@
+include ../title-page/title-page
+include ../journal/journal
+include ../contact/contact
+include ../post-review/post-review
+
+mixin journal-page()
+	+b.journal-page&attributes(attributes)
+		+title-page Journal
+		+journal
+			+post-review(	getData("post-review")	)._new
+			+post-review(	getData("post-review")	)
+			+post-review(	getData("post-review")	)
+			+post-review(	getData("post-review")	)
+			+post-review(	getData("post-review")	)
+		+contact

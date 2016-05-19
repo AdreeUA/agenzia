@@ -1,0 +1,23 @@
+[
+{
+  "title": "Gildan Blue ",
+  "name": "Cotton",
+  "disc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum orci. Proin pellentesque in mi quis pellentesque.",
+  "specifications":[
+    "Mauris pretium auctor quam.",
+	  "Vestibulum et nunc" ,
+	  "Idnisi fringilla Proin",
+	  "YXS-4XL 40 colors"],
+  "price": "$129.00",
+  "oldPrice": "$293.00",
+  "image": "assets/images/product-1.jpg",
+  "stars": "3",
+  "social": [
+    ["twitter", "www.twitter.com"],
+    ["facebook", "www.facebook.com"],
+    ["google-plus", "www.google-plus.com"],
+    ["instagram", "www.instagram.com"],
+    ["linkedin", "www.linkedin.com"]
+  ]
+}
+]

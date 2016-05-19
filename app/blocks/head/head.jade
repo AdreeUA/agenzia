@@ -46,11 +46,16 @@ head
 	meta(name='msapplication-wide310x150logo' content='/mstile-wide.png')
 	meta(name='msapplication-square310x310logo' content='/mstile-large.png')
 
-	//- http://realfavicongenerator.net/faq#why_ico_not_declared
 
 	block head
 	title= pageTitle || ''
 	meta(name='description' content=pageDescription || '')
 	meta(name='keywords' content=pageKeywords || '')
 
-	link(href='/assets/styles/app.min.css?t=' + timestamp rel='stylesheet')
+	link(href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css')
+	link(href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700' rel='stylesheet' type='text/css')
+	link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+	link(href='https://cdn.jsdelivr.net/jquery.formstyler/1.7.4/jquery.formstyler.css' rel='stylesheet')
+
+
+	link(href='assets/styles/app.min.css?t=' + timestamp rel='stylesheet')

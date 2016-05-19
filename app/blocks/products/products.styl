@@ -1,0 +1,71 @@
+.products
+	display block
+	font-size 0
+
+	&__item
+		font-size 13px
+		display inline-block
+		vertical-align top
+		clearfix()
+		width 50%
+		margin-bottom 48px
+
+		+below(m)
+			width 100%
+
+	&__picture
+		height 422px
+		width 47%
+		overflow hidden
+		display inline-block
+		vertical-align top
+
+		+below(xl)
+			height 300px
+		+below(l)
+			height 200px
+		+below(m)
+			height 300px
+		+below(xs)
+			height 200px
+			width 100%
+
+	&__image
+		width 100%
+
+	&__content
+		display inline-block
+		vertical-align top
+		width 52%
+		padding 60px 23px 20px
+
+		+below(l)
+			padding 15px 12px 10px
+		+below(xs)
+			width 100%
+
+	&__title
+		color #101010
+		font-size 45px
+		font-weight 700
+		margin-bottom 31px
+		text-decoration none
+
+		+below(l)
+			font-size 25px
+			margin-bottom 15px
+
+	&__name
+		display block
+		font-weight 400
+
+	&__disc
+		margin-bottom 16px
+
+	.specifications
+		margin-left 23px
+		margin-bottom 33px
+
+		+below(l)
+			margin-left 10px
+			margin-bottom 15px

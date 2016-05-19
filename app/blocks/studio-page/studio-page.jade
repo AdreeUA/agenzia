@@ -1,0 +1,49 @@
+include ../title-page/title-page
+include ../about/about
+include ../skill/skill
+include ../quotations/quotations
+include ../creation/creation
+include ../clients/clients
+include ../maintenance/maintenance
+include ../social-message/social-message
+include ../contact/contact
+include ../team/team
+include ../btn/btn
+include ../row/row
+
+mixin studio-page()
+	+b.studio-page&attributes(attributes)
+		+title-page 
+			span.title-page_bold Agenzia 
+			| The Studio
+		+e.inner
+			+e.picture
+				+e.image-wrap
+					+e.image(src="assets/images/slide-6.jpg")
+				+e.image-wrap
+					+e.image(src="assets/images/slide-5.jpg")
+			+e.skills-wrap
+				+about
+					+e.UL.list
+						+e.item Tabs (one style of tabs, buttons over the top)
+						+e.item Lists (list with bullets and list with numbers)
+						+e.item Pagination
+						+e.item Blockquote
+				+skill
+					.slill__btn
+						+btn Get in touch
+		+e.team
+			+team(getData("team"))
+		+e.quotations
+			+quotations(getData("quotations")).owl-carousel
+		+e.creation
+			+creation(getData("creation"))
+		+e.clients
+			+row
+				+clients(getData("studio-page-clients"))
+		+e.maintenance
+			+maintenance(getData("maintenance"))
+		+e.social-message
+			+social-message(getData("social-message")).owl-carousel
+			+btn._large(href="#") Follow us
+		+contact

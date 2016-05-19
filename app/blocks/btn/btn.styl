@@ -1,0 +1,31 @@
+.btn
+	display inline-block
+	min-width 190px
+	font-family fontMain
+	font-size 16px
+	font-weight 700
+	line-height 50px
+	text-align center
+	vertical-align top
+	text-decoration none
+	color inherit
+	border 1px solid
+	transition all .5s
+
+	&:hover
+		color colorSecond
+		background-color colorMain
+		border-color colorMain
+		box-shadow 0 0 15px rgba(#000, .75)
+		transition all .5s
+
+	+below(l)
+		min-width 150px
+		font-size 13px
+		line-height 40px
+
+	&_large
+		min-width 500px
+
+		+below(xs)
+			min-width 300px

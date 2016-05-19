@@ -1,0 +1,22 @@
+//- mixin social-icon(item)
+//- 	+b.social-icon&attributes(attributes)
+//- 		if item.twitter
+//- 			+e.item
+//- 				+e.link_twitter(href="#{item.twitter}")
+//- 					i.fa.fa-twitter
+//- 		else if item.facebook
+//- 			+e.item
+//- 				+e.link_facebook(href="#")
+//- 					i.fa.fa-facebook
+//- 		else if item.google-plus				
+//- 			+e.item
+//- 				+e.link_google-plus(href="#")
+//- 					i.fa.fa-google-plus	
+//- 		else if item.linkedin				
+//- 			+e.item
+//- 				+e.link_linkedin(href="#")
+//- 					i.fa.fa-linkedin
+//- 		else if item.instagram				
+//- 			+e.item
+//- 				+e.link_instagram(href="#")
+//- 					i.fa.fa-instagram

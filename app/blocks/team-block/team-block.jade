@@ -1,0 +1,5 @@
+include ../team/team
+
+mixin team-block()
+	+b.team-block&attributes(attributes)
+		+team(getData("team")).owl-carousel

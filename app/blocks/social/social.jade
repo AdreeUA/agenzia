@@ -1,0 +1,6 @@
+mixin social(data)
+	+b.UL.social&attributes(attributes)
+		each val in data
+			+e.item
+				+e(href="#{val[1]}" class="link_#{val[0]}")
+					i.fa(class="fa-#{val[0]}")

@@ -1,0 +1,24 @@
+include ../specifications/specifications
+include ../rating/rating
+
+mixin product-more(data)
+	+b.product-more&attributes(attributes)
+		each item in data
+			+e.item 
+				+e.INPUT.hidden(type="checkbox" id="productDisc")
+				+e.LABEL.title_disc(for="productDisc")
+					| Description
+				+e.content
+					| #{item.disc}
+			+e.item 
+				+e.INPUT.hidden(type="checkbox" id="productInfo")
+				+e.LABEL.title_info(for="productInfo")
+					| Additional information
+				+e.content
+					+specifications(item.specifications)
+			+e.item 
+				+e.INPUT.hidden(type="checkbox" id="productRating")
+				+e.LABEL.title_rating(for="productRating")
+					| Reviews (#{item.stars})
+					+rating(item.stars)
+				+e.content

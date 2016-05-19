@@ -1,0 +1,83 @@
+.more
+	position absolute
+	z-index 99
+	top -9px
+	right -9px
+	left -9px
+	bottom -9px
+	text-align center
+	background-color rgba(#5e5e5e,.97)
+	opacity 0
+	transition all 1s
+	width 100%
+	height 100%
+
+	&:hover
+		opacity 1
+		box-shadow 0 0 29px rgba(0, 0, 0, .75)
+		transition all 1s
+
+	&:before
+		display inline-block
+		height 100%
+		vertical-align middle
+		content ''
+
+	+below(xl)
+		left -4px
+		right -4px
+		top -4px
+		bottom -4px
+
+	&__inner
+		padding-x(33px)
+		display inline-block
+		vertical-align middle
+		color colorSecond
+
+		+below(l)
+			padding-x(20px)
+
+	&__name
+		font-size 18px
+		font-weight 700
+
+		+below(l)
+			font-size 15px
+
+	&__disc
+		position relative
+		margin-bottom 40px
+		font-size 15px
+
+		&:before
+			position absolute
+			left 50%
+			bottom -16px
+			margin-left -25px
+			width 50px
+			height 2px
+			content ''
+			background-color colorSecond
+
+		+below(l)
+			font-size 13px
+
+	.social__link
+		font-size 16px
+		color inherit
+
+		&:hover
+			color inherit
+
+		+below(l)
+			font-size 14px
+
+	.social__item
+		margin-right 26px
+
+		&:last-child
+			margin-right 0
+
+		+below(l)
+			margin-right 15px

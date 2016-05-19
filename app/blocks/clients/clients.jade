@@ -1,0 +1,9 @@
+include ../icon/icon
+
+mixin clients(data)
+	+b.clients&attributes(attributes)
+		+e.H4.title Clients
+			+e.SPAN.subtitle Our customers
+		+e.UL.list
+			-for (var i = 0; i < data.length; i++)
+				+e.item(class="clients__item_#{data[i]}")

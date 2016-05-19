@@ -1,0 +1,24 @@
+.pagination-circle
+	position absolute
+	right 0
+	left 0
+	bottom 46px
+	
+	&__item
+		margin-right 8px
+		display inline-block
+		width 10px
+		height 10px
+		vertical-align middle
+		cursor pointer
+		background-color colorMain
+		border-radius 50%
+		
+		&:last-of-type
+			margin-right 0
+		
+		&_active
+			width 14px
+			height 14px
+			background-color transparent
+			border 2px solid colorMain

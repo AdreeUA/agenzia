@@ -1,0 +1,255 @@
+.post-review
+	position relative
+	height 368px
+	width 50%
+	display inline-block
+	vertical-align top
+	text-align center
+	font-size 13px
+	overflow hidden
+	transition all .5s
+
+	+below(m)
+		width 100%
+
+	// HOVER .post-review
+	&:not(.post-review_new):hover
+		box-shadow 0 0 46px rgba(0, 0, 0, .75)
+
+		.post-review__content
+			padding-top 29px
+			margin-top 239px
+
+			+below(xl)
+				padding-top 10px
+
+		.post-review__info
+			display inline-block
+
+		.post-review__title
+			margin-bottom 20px
+
+			+below(xs)
+				margin-bottom 8px
+
+		.post-review__share
+		.post-review__btn
+			opacity 1
+
+		.post-review__btn
+		.post-review__title
+		.post-review__info
+		.post-review__share
+		.post-review__content
+			transition all .5s
+
+	// NEW POST
+	&_new
+		width 100%
+		font-size 0
+		height 100%
+
+		.post-review__picture
+		.post-review__content
+			width 50%
+			display inline-block
+			vertical-align top
+			font-size 13px
+
+			+below(m)
+				width 100%
+
+		.post-review__picture
+			position static
+			height 420px
+
+			+below(shd)
+				height 467px
+			+below(xl)
+				height 457px
+			+below(l)
+				height 532px
+			+below(m)
+				height auto
+
+		.post-review__image
+
+			+below(xl)
+				width 130%
+			+below(l)
+				width 150%
+			+below(m)
+				width 100%
+
+		.post-review__content
+			margin 0
+			padding-top 66px
+			&:before
+				top 50%
+				left 0
+				border-width 20px 20px 20px 0
+				border-color transparent colorSecond transparent transparent
+
+			+below(m)
+				padding-top 20px
+				&:before
+					top -19px
+					left 50%
+					margin-left -20px
+					border-width 0 20px 20px 20px
+					border-color transparent transparent colorSecond transparent
+
+		.post-review__info
+			display block
+
+		.post-review__title
+			margin-bottom 20px
+
+			+below(xs)
+				margin-bottom 8px
+
+		.post-review__disc
+			max-height 100%
+			margin-bottom 19px
+
+		.post-review__share
+			opacity 1
+			top 6px
+
+			+below(m)
+				top -39px
+			+below(xs)
+				top -26px
+
+		.post-review__btn
+			margin-bottom 20px
+			position static
+			opacity 1
+			.btn
+				@extend .btn
+
+	// DEFAULT
+	&__content
+		position relative
+		margin-top 279px
+		background-color colorSecond
+		padding-x(89px)
+		padding-top 35px
+		transition all .5s
+		height 100%
+
+		&:before
+			content ''
+			position absolute
+			width 0
+			height 0
+			border-style solid
+			border-width 0 20px 20px 20px
+			border-color transparent transparent colorSecond transparent
+			top -19px
+			left 50%
+			margin-left -20px
+
+		+below(shd)
+			padding-x(30px)
+		+below(xs)
+			margin-top 239px
+			padding-top 10px
+
+	&__picture
+		overflow hidden
+		position absolute
+		width 100%
+		height 368px
+
+	&__image
+		width 100%
+		height 100%
+
+	&__share
+		font-weight 700
+		color colorGrey
+		padding-left 20px
+		padding-right 8px
+		display inline-block
+		vertical-align top
+		position absolute
+		opacity 0
+		background-color colorSecond
+		right 0
+		top -32px
+
+		+below(l)
+			padding-left 10px
+			top -24px
+		+below(m)
+			top -37px
+		+below(xs)
+			top -24px
+			opacity 1
+
+		// Social icon
+		.social
+			vertical-align middle
+
+			&__link
+				padding 12px
+				font-size 16px
+
+				+below(l)
+					padding 5px
+					font-size 14px
+				+below(m)
+					padding 12px
+				+below(xs)
+					padding 5px
+
+
+	&__info
+		color colorGrey
+		margin-bottom 6px
+		position relative
+		display none
+
+		+below(xs)
+			display block
+
+		a
+			color inherit
+			text-decoration none
+
+	&__themes
+	&__author
+	&__date
+		&:hover
+			text-decoration underline
+
+	&__title
+		font-size 17px
+		font-weight 700
+		margin-bottom 38px
+
+		+below(xs)
+			margin-bottom 8px
+
+	&__disc
+		max-height 3.6em
+		overflow hidden
+		p
+			margin-bottom 14px
+			line-height 1.2
+
+	&__btn
+		position absolute
+		top -142px
+		left 0
+		right 0
+		opacity 0
+
+		.btn
+			background-color colorSecond
+			border-color colorSecond
+
+			&:hover
+				color colorMain
+				box-shadow 0 0 15px rgba(0, 0, 0, .75)

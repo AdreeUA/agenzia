@@ -1,0 +1,91 @@
+.studio-block
+	display block
+
+	&__wrap
+		position relative
+		display flex
+		overflow hidden
+		min-height 500px
+		align-items flex-start
+
+		+below(m)
+			min-height 400px
+			flex-wrap wrap
+
+	&__picture
+		width 50%
+		overflow hidden
+
+		&:before
+			position absolute
+			top 0
+			bottom 0
+			width 50%
+			height 100%
+			content ''
+			background-image url(../images/slide-6.jpg)
+			background-repeat no-repeat
+			background-position 50% 50%
+			background-size cover
+
+		+below(m)
+			width 100%
+			min-height 374px
+			position relative
+			&:before
+				width 100%
+				height auto
+				background-position 50% -15px
+
+	&__image
+		width 100%
+
+	&__skill-set
+		padding 82px 190px 20px 88px
+		width 50%
+
+		input
+			display none
+
+		+below(m)
+			width 100%
+
+		+below(xl)
+			padding 50px 50px 20px 50px
+		+below(l)
+			padding 25px
+		+below(m)
+			padding-x(50px)
+
+	.skill
+	.about
+		margin-bottom 41px
+		display none
+
+		+below(l)
+			margin-bottom 27px
+		+below(m)
+			display block
+
+		&__title
+			display none
+
+			+below(m)
+				display block
+
+	.studio-block__tab
+		margin-right 43px
+		display inline-block
+		cursor pointer
+		color #b9b9b9
+
+		+below(m)
+			display none
+
+#tab-about:checked ~ .about
+#tab-skill:checked ~ .skill
+	display block
+
+#tab-skill:checked	+ .studio-block__tab
+#tab-about:checked	+ .studio-block__tab
+	color inherit

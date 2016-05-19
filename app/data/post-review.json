@@ -1,0 +1,27 @@
+[
+  {
+    "title": "The Talk of Manchester Awards - 4 Reasons You Should Vote For e3",
+    "disc": [
+
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis odio est, et laoreet tortor tincidunt vitae. Aliquam erat volutpat. sodales, nisl nec posuere pretium, mauris erat aliquam tortor, eu maximus eros ligula eu lacus. Aenean elit libero, placerat a sollicitudin sed, mattis at tellus. Aenean commodo sapien mi, sit amet aliquet libero condimentum eu.",
+
+      "Ut sollicitudin viverra finibus. Cras malesuada odio eros, in mattis est pulvinar ut. Nullam viverra neque sit amet lorem mattis sagittis. leo. Integer quis semper diam. Etiam viverra pellentesque faucibus. Vivamus scelerisque velit eu finibus malesuada. Aliquam fringilla,ligula quis, accumsan ipsum. Suspendisse sit amet commodo dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+
+      "Quisque et dolor et dui viverra commodo a non nunc. Duis in porttitor arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. sem."
+    ],
+    "btnLink": "journal-post.html",
+    "author": "Mark Cioster",
+    "date": "December 1, 2014",
+    "themes": [
+      "Graphic Design"
+    ],
+    "social": [
+
+        ["twitter", "twitter.com"],
+        ["facebook", "facebook.com"],
+        ["google-plus", "google.com"]
+
+    ],
+    "image": "assets/images/post.jpg"
+  }
+]

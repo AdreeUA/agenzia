@@ -1,0 +1,8 @@
+mixin new-product(data)
+	+b.new-product&attributes(attributes)
+		each item in data
+			+e.content
+				+e.title #{item.title} 
+					span #{item.name}
+				+e.disc #{item.disc}
+				+btn.new-product__btn(href="product_item.html") #{item.price} learn more

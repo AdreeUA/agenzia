@@ -1,0 +1,17 @@
+include ../scale/scale
+include ../btn/btn
+
+mixin skill()
+	+b.skill&attributes(attributes)
+		+e.H3.title Skill
+		+e.disc perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+		+e.UL.list
+			+e.item
+				+scale("PHOTOSHOP", "75%")
+			+e.item
+				+scale("DEVELOPMENT", "85%")
+			+e.item
+				+scale("MARKETING", "90%")
+			+e.item
+				+scale("WORDPRESS", "95%")
+		block

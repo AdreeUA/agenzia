@@ -1,0 +1,12 @@
+include ../more/more
+include ../social/social
+
+mixin team(list)
+	+b.team&attributes(attributes)
+		each item in list
+			+e.item(style="background-image: url(#{item.avatar})")
+				+more
+					+e.name #{item.name}
+					+e.disc #{item.disc}
+					if item.social
+						+social(item.social)

@@ -1,0 +1,4 @@
+mixin specifications(data)
+	+b.UL.specifications&attributes(attributes)
+		-for (var i = 0; i < data.length; i++)
+			+e.item #{data[i]}

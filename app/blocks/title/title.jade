@@ -1,0 +1,7 @@
+include ../row/row
+
+mixin title(title)
+	+b.title-block&attributes(attributes)
+		+row
+			h2.title=title
+			block

@@ -1,0 +1,95 @@
+.comments
+	padding-bottom 58px
+	position relative
+	
+	&:before
+		content ''
+		position absolute
+		left 0
+		width 100%
+		bottom 0
+		border 1px solid #ddd
+		
+	+below(m)
+		padding-bottom 15px
+	
+	&__sum
+		width 131px
+		font-size 16px
+		font-weight 700
+		line-height 36px
+		background-color #000
+		text-align center
+		color colorSecond
+		text-transform uppercase
+		
+	&__item
+		clearfix()
+		position relative
+		border 1px solid #ddd
+		
+		&_sub
+			margin-left 100px
+			
+			&:before
+				content ''
+				size(30px)
+				left -52px
+				top -9px
+				position absolute
+				border 1px solid 
+				border-color transparent transparent #ddd #ddd 
+
+	&__avatar
+		size(130px)
+		overflow hidden
+		float left
+		margin-right 23px
+		
+		+below(m)
+			size(80px)
+		
+		&_image
+			width 100%
+			
+	&__content
+		padding 28px 25px 15px 0
+		
+	&__author
+		font-size 12px
+		font-weight 700
+		margin-bottom 8px
+		text-decoration none
+		display block
+		color inherit
+		
+		&:hover
+			text-decoration underline
+		
+	&__date
+		color #aaa
+		font-size 12px
+		margin-bottom 19px
+		text-decoration none
+		display block
+		
+		&:hover
+			text-decoration underline
+		
+	&__text
+		line-height 1.4
+		margin-left 20px
+		
+	&__reply
+		position absolute
+		right 14px
+		top 19px
+		color #aaa
+		font-size 11px
+		text-decoration none
+		
+		&:hover
+			text-decoration underline	
+			
+
+		

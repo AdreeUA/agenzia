@@ -1,0 +1,46 @@
+.scale
+	margin-bottom 36px
+	width 100%
+	// text-align right
+
+	+below(l)
+		margin-bottom 15px
+	+below(m)
+		// text-align left
+
+	&__name
+		float left
+		font-family inherit
+		font-size 15px
+		font-weight 700
+		text-transform uppercase
+
+		&:before
+			position absolute
+			right 0
+			content attr(data-value) ''
+
+		+below(l)
+			font-size 13px
+		+below(m)
+			float none
+
+	&__progress-bar
+		position relative
+		margin-right 66px
+		margin-left 140px
+		display block
+		min-width 30%
+		height 10px
+		background-color #efefef
+
+		+below(l)
+			margin-right 44px
+			margin-left 118px
+		+below(m)
+			margin 3px 0 0 
+
+		&_use
+			position relative
+			height 100%
+			background-color colorMain

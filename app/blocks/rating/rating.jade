@@ -1,0 +1,16 @@
+mixin rating()
+	+b.DIV.rating&attributes(attributes)
+		+e.INPUT.input(type="radio" name="rating" id="star-rating-5" value="5")
+		+e.LABEL.icon(class="fa fa-star" for="star-rating-5" title="Rating 5 of 5")
+
+		+e.INPUT.input(type="radio" name="rating" id="star-rating-4" value="4")
+		+e.LABEL.icon(class="fa fa-star" for="star-rating-4" title="Rating 4 of 5")
+
+		+e.INPUT.input(type="radio" name="rating" id="star-rating-3" value="3" checked)
+		+e.LABEL.icon(class="fa fa-star" for="star-rating-3" title="Rating 3 of 5")
+
+		+e.INPUT.input(type="radio" name="rating" id="star-rating-2" value="1")
+		+e.LABEL.icon(class="fa fa-star" for="star-rating-2" title="Rating 2 of 5")
+
+		+e.INPUT.input(type="radio" name="rating" id="star-rating-1" value="1")
+		+e.LABEL.icon(class="fa fa-star" for="star-rating-1" title="Rating 1 of 5")

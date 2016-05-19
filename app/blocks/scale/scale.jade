@@ -1,0 +1,5 @@
+mixin scale(name, persent)
+	+b.scale&attributes(attributes)
+		+e.SPAN.name(data-value="#{persent}")= name
+		+e.progress-bar
+			.scale__progress-bar_use(style="width:#{persent}")

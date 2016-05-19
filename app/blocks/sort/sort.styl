@@ -1,0 +1,32 @@
+.sort
+	display block
+	float right
+	font-family fontSecondary
+	font-size 17px
+
+	+below(l)
+		float none
+		text-align right
+	+below(xs)
+		text-align center
+
+	&__item
+		display inline-block
+		vertical-align top
+
+	&__link
+		padding-x(20px)
+		line-height 100px
+		color #bbb
+		display block
+		text-decoration none
+
+		+below(xl)
+			line-height 50px
+		+below(l)
+			line-height 30px
+		+below(xs)
+			padding-x(10px)
+
+		&_active
+			color colorMain

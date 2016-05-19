@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Basic",
+    "forWhom": "For Individuals",
+    "price": "4.99",
+    "listServices": [
+      {
+        "discSpace": "250 Mb",
+        "dataTransfer": "5 Gb",
+        "domainName": "1",
+        "ftp": "2",
+        "mysql": "2",
+        "support": "24/7 Support"
+      }
+    ],
+    "btnLink": "#777"
+  },
+  {
+    "name": "Plus",
+    "forWhom": "For Small Business",
+    "price": "4.99",
+    "listServices": [
+      {
+        "discSpace": "250 Mb",
+        "dataTransfer": "5 Gb",
+        "domainName": "1",
+        "ftp": "2",
+        "mysql": "2",
+        "support": "24/7 Support"
+      }
+    ],
+    "btnLink": "#777"
+  },
+  {
+    "name": "Pro",
+    "forWhom": "For Big Business",
+    "price": "4.99",
+    "listServices": [
+      {
+        "discSpace": "250 Mb",
+        "dataTransfer": "5 Gb",
+        "domainName": "1",
+        "ftp": "2",
+        "mysql": "2",
+        "support": "24/7 Support"
+      }
+    ],
+    "btnLink": "#777"
+  },
+  {
+    "name": "Extra",
+    "forWhom": "Corporate Offer",
+    "price": "4.99",
+    "listServices": [
+      {
+        "discSpace": "250 Mb",
+        "dataTransfer": "5 Gb",
+        "domainName": "1",
+        "ftp": "2",
+        "mysql": "2",
+        "support": "24/7 Support"
+      }
+    ],
+    "btnLink": "#777"
+  }
+]

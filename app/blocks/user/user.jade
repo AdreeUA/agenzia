@@ -1,0 +1,15 @@
+mixin user()
+	+b.user&attributes(attributes)
+		+e.col
+			+e.avatar
+				+e.img(src="assets/images/avatar-1.jpg")
+			+e.personal-info
+				+e.name Mark Jhone
+				+e.profession Author
+		+e.col
+			+e.register-date On January 31, 2014
+			+e.A.profile(href="#") 
+				span Go to 
+				| Mark Web
+				i.fa.fa-arrow-circle-o-right 
+

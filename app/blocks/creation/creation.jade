@@ -1,0 +1,12 @@
+mixin creation(data)
+	+b.creation&attributes(attributes)
+		each item in data
+			+e.item
+				+e.icon
+					i.fa(class="fa-#{item.icon}")
+				+e.H4.title= item.title
+				+e.SPAN.subtitle= item.subtitle
+				if item.text
+					each val in item.text
+						+e.P.text= val
+		block

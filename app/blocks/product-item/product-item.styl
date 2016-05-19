@@ -1,0 +1,123 @@
+.product-item
+
+	&__nav
+		padding-top 38px
+		padding-bottom 35px
+		background-color colorBg
+		clearfix()
+		padding-x(7.6%)
+		text-align center
+		margin-bottom 117px
+		
+		+below(l)
+			margin-bottom 50px
+			padding-top 24px
+			padding-bottom 18px
+		+below(sm)
+			margin-bottom 20px
+
+	&__pagination
+		font-family fontSecondary
+		font-size 17px
+		font-weight 700
+		color #bbb
+		text-decoration none
+
+		&:hover
+			color colorGrey
+
+		&_next
+			float right
+			.fa
+				margin-left 15px
+
+		&_prev
+			float left
+			.fa
+				margin-right 15px
+
+	&__view
+		display inline-block
+		vertical-align top
+		width 32px
+		height 27px
+		background-image url(../images/product-view.png)
+		cursor pointer
+		background-repeat no-repeat
+		background-size cover
+
+	&__picture-wrap
+	&__content
+		width 49%
+		display inline-block
+		vertical-align top
+		
+		+below(sm)
+			width 100%
+
+	&__picture-wrap
+		overflow hidden
+
+	&__picture
+		width 720px
+		height 800px
+		margin-left auto
+		overflow hidden
+		
+		+below(shd)
+			width 80%
+			height 620px
+		+below(l)
+			height 350px
+		+below(sm)
+			margin 0 auto
+			width 100%
+
+	&__image
+		width 100%
+
+	&__content
+		max-width 560px
+		padding-left 40px
+		padding-top 17px
+		margin-bottom 20px
+		
+		.link-come-back
+			margin-bottom 26px
+
+	&__title
+		color #101010
+		font-size 45px
+		font-weight 700
+		margin-bottom 11px
+
+	&__price
+		font-size 34px
+		margin-bottom 53px
+		
+		+below(l)
+			margin-bottom 25px
+
+	&__old-price
+		color #969696
+		font-size 22px
+		text-decoration line-through
+		margin-right 5px
+
+	.product-characteristics
+		margin-bottom 30px
+
+	.product-more
+		margin-bottom 12px
+		
+	&__share
+		font-size 16px
+		font-weight 700
+		
+		.social
+			color colorGrey
+			margin-left 41px
+			margin-top -8px
+			
+			&__item
+				padding 8px

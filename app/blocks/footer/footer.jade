@@ -1,0 +1,7 @@
+include ../social/social
+
+mixin footer()
+	+b.footer&attributes(attributes)
+		+social(getData("social-footer")).footer__social
+		+e.P.copyright
+			| &copy 2014 <b>Agenzia.</b> All rights reserved.

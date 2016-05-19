@@ -1,0 +1,22 @@
+include ../title/title
+include ../row/row
+include ../btn/btn
+include ../important-info/important-info
+include ../new-product/new-product
+include ../products/products
+
+mixin product-block()
+	+b.product-block&attributes(attributes)
+		+title("Products")
+		+row
+			+important-info
+
+				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum orci. 
+				b Proin pellentesque in mi quis pellentesque. 
+				| Phasellus posuere elit risus, nec laoreet enim lacinia. Mauris pretium auctor quam. Vestibulum et nunc id nisi fringilla ultrices 
+				b posuere cubilia Curae
+
+			+new-product(getData("new-product"))
+			+products(getData("products"))
+			.product-block__btn
+				+btn._large(src="/products.html") More products
