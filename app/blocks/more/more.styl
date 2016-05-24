@@ -1,33 +1,25 @@
 .more
 	position absolute
 	z-index 99
-	top -9px
-	right -9px
-	left -9px
-	bottom -9px
+	top 0
+	right 0
+	left 0
+	bottom 0
 	text-align center
 	background-color rgba(#5e5e5e,.97)
 	opacity 0
-	transition all 1s
-	width 100%
-	height 100%
+	transition all .25s
 
 	&:hover
 		opacity 1
 		box-shadow 0 0 29px rgba(0, 0, 0, .75)
-		transition all 1s
+		// transition all .5s
 
 	&:before
 		display inline-block
 		height 100%
 		vertical-align middle
 		content ''
-
-	+below(xl)
-		left -4px
-		right -4px
-		top -4px
-		bottom -4px
 
 	&__inner
 		padding-x(33px)

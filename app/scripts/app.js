@@ -1,5 +1,11 @@
-// КАРУСЕЛЬ
+import $ from 'jquery';
+import 'owl.carousel';
+import 'jquery.formstyler';
+import 'lightbox2';
+import 'jquery-colorbox';
+import 'jquery-equalheights';
 
+// КАРУСЕЛЬ
 $(document).ready(function () {
 
 	$('.team.owl-carousel').owlCarousel({
@@ -13,31 +19,30 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplayTimeout: 6000,
 		responsive: {
-					0: {
-						items: 3
-					},
-					400: {
-						items: 3
-					},
-					600: {
-						items: 3
-					},
-					800: {
-						items: 4
-					},
-					1024: {
-						items: 5
-					}
+			0: {
+				items: 3
+			},
+			400: {
+				items: 3
+			},
+			600: {
+				items: 3
+			},
+			800: {
+				items: 4
+			},
+			1024: {
+				items: 5
+			}
 		}
 	});
 
-	$('.slider__list.owl-carousel').owlCarousel({
+	$('.slider__list').owlCarousel({
 		items: 1,
 		dots: true,
 		loop: true,
 		autoplay: true,
-		autoplayTimeout: 6000,
-		autoHeight: true
+		autoplayTimeout: 6000
 	});
 
 	$('.creation.owl-carousel').owlCarousel({
@@ -73,7 +78,7 @@ $(document).ready(function () {
 		loop: true,
 		autoplay: true,
 		autoplayTimeout: 6000,
-		center: true,
+		center: true
 	});
 
 	$('.social-message.owl-carousel').owlCarousel({
@@ -82,7 +87,7 @@ $(document).ready(function () {
 		loop: true,
 		autoplay: true,
 		autoplayTimeout: 6000,
-		center: true,
+		center: true
 	});
 
 	$('.post__list').owlCarousel({
@@ -90,7 +95,7 @@ $(document).ready(function () {
 		dots: false,
 		loop: false,
 		nav: true,
-		navText: [" ", " "],
+		navText: ['', ''],
 		responsive: {
 			0: {
 				items: 1
@@ -107,22 +112,10 @@ $(document).ready(function () {
 			1024: {
 				items: 3
 			}
-		},
-	});
-
-	// БЛОКИ about и skill одинакой высоты
-	var $columns = $('.skill-set__item');
-	var $rows = $('.studio-block__skill-set');
-	var height = 0;
-	$columns.each(function () {
-		if ($(this).height() > height) {
-			height = $(this).height();
 		}
 	});
-	$columns.height(height);
 
-
-	//jQuery form
+	// jQuery form
 	(function ($) {
 		$(function () {
 			$('#color-product, #size-product, #number-product').styler({
@@ -133,23 +126,35 @@ $(document).ready(function () {
 	})(jQuery);
 
 	$('.social__link_info').colorbox({
-		maxWidth:'95%', 
-		maxHeight:'95%',
+		maxWidth: '95%',
+		maxHeight: '95%',
 		rel: 'works'
 	});
-	var resizeTimer;
-	function resizeColorBox()
-	{
-		if (resizeTimer) clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function() {
-				if ($('#cboxOverlay').is(':visible')) {
-						$.colorbox.resize({width:'90%', height:'90%'});
-				}
-		}, 400)
+	let resizeTimer;
+
+	function resizeColorBox() {
+		if (resizeTimer) {
+			clearTimeout(resizeTimer);
+		}
+		resizeTimer = setTimeout(function () {
+			if ($('#cboxOverlay').is(':visible')) {
+				$.colorbox.resize({
+					width: '90%',
+					height: '90%'
+				});
+			}
+		}, 400);
 	}
 
 	// Resize Colorbox when resizing window or changing mobile device orientation
 	$(window).resize(resizeColorBox);
-	window.addEventListener("orientationchange", resizeColorBox, false);
+	window.addEventListener('orientationchange', resizeColorBox, false);
+
+	// Высота Wors__item
+	function workHeight() {
+		const workWidth = $('.works__item').width();
+		$('.works__item').height(workWidth);
+	};
+	$(window).resize(workHeight);
 
 });

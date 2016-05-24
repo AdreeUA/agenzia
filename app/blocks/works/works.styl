@@ -2,31 +2,31 @@
 	display block
 	font-size 0
 	text-align center
+	overflow hidden
+
+	&__list
+		width 100%
 
 	&__item
-		width calc(25%+17px)
+		width 25%
 		height 400px
-		overflow hidden
 		display inline-block
 		vertical-align top
 		position relative
-		padding 9px
-		margin -9px
+		background-size cover
+		background-position 50% 50%
 
 		+below(shd)
 			height 295px
 		+below(xl)
-			height 280px
-			padding 4px
-			margin -4px
-			width 25.6%
+			height 260px
 		+below(l)
 			height 300px
-			width 34.1%
+			width 33.333333%
 			&:last-child
 				display none
 		+below(m)
-			width 34.33%
+			width 33.333333%
 			height 250px
 		+below(sm)
 			height 250px

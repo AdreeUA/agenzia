@@ -6,8 +6,7 @@ mixin works(data)
 	+b.works&attributes(attributes)
 		+e.list
 			each item in data
-				+e.item
-					+e.IMG.picture(src="#{item.image}")
+				+e.item(style="background-image:url(#{item.image})")
 					+more
 						+e.name #{item.name}
 						+e.disc #{item.disc}

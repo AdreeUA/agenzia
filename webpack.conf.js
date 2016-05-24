@@ -4,7 +4,9 @@ import notifier from 'node-notifier';
 import webpack from 'webpack';
 import NpmInstallPlugin from 'npm-install-webpack-plugin';
 
-const eslintFormatter = ({notify}) => errors => {
+const eslintFormatter = ({
+	notify
+}) => errors => {
 	if (errors[0].messages) {
 		console.log(stylish(errors));
 		if (notify) {
@@ -69,19 +71,35 @@ export default function makeWebpackConfig({
 				'process.env': {
 					NODE_ENV: JSON.stringify(process.env.NODE_ENV)
 				}
+			}),
+			new webpack.ProvidePlugin({
+				$: "jquery",
+				jQuery: "jquery",
+				"window.jQuery": "jquery"
 			})
 		].concat(debug ? [
-			new NpmInstallPlugin({saveDev: true}),
+			new NpmInstallPlugin({
+				saveDev: true
+			}),
 			new webpack.HotModuleReplacementPlugin()
 		] : [
 			new webpack.optimize.DedupePlugin(),
-			new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}, output: {comments: false}})
+			new webpack.optimize.UglifyJsPlugin({
+				compress: {
+					warnings: false
+				},
+				output: {
+					comments: false
+				}
+			})
 		]),
 		eslint: {
 			configFile: path.join(__dirname, '.eslintrc'),
 			emitErrors: false,
 			emitWarning: true,
-			formatter: eslintFormatter({notify})
+			formatter: eslintFormatter({
+				notify
+			})
 		}
 	};
 }
