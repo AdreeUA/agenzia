@@ -1,0 +1,25 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Agenzia';
+
+block content
+	+b.UL.list
+		+e.item
+			+e.A.link(href='index.html') Главная страница
+		+e.item
+			+e.A.link(href='journal.html') Страница "Journal"
+		+e.item
+			+e.A.link(href='journal-post.html') Отдельная старница "Journal"
+		+e.item
+			+e.A.link(href='products.html') Продукты
+		+e.item
+			+e.A.link(href='product_item.html') Страница отдельного продукта
+		+e.item
+			+e.A.link(href='studio.html') Страница "Studio"
+		+e.item
+			+e.A.link(href='works.html') Работы
+		+e.item
+			+e.A.link(href='404.html') Страница 404
+
+
